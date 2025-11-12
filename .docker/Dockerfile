@@ -19,7 +19,11 @@ RUN groupadd --gid $USER_GID $USERNAME \
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     ros-jazzy-xacro \
+    ros-jazzy-realsense2-description \
     ros-jazzy-joint-state-publisher-gui \
+    ros-jazzy-realsense2-camera \
+    ros-jazzy-sick-safetyscanners2 \
+    ros-jazzy-robot-localization \
     && rm -rf /var/lib/apt/lists/*
 
 ENV XDG_RUNTIME_DIR=/run/user/"${USER_UID}"
