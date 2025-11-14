@@ -10,7 +10,7 @@ Changelog for package franka_description
 ----------
 * fix: add fp3 robot joint limits
 * fix: group definition in SRDF file checking for right TCP
-* feat: add fr3v2.1 robot variant
+* feat: add fr3v2_1 robot variant
 
 2.0.0 (2025-08-26)
 ------------------
