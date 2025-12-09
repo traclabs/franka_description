@@ -9,15 +9,17 @@
                  gazebo:=false
                  hand:=false
                  gazebo_effort:=false
-                 arm_prefix:=''">
+                 arm_prefix:=''
+                 is_async:=false">
 
-    <xacro:property name="arm_prefix_modified" value="${'' if arm_prefix == '' else arm_prefix + '_'}" />
-    <ros2_control name="${arm_prefix_modified}FrankaHardwareInterface" type="system" is_async="true">
-        <properties>
-          <async scheduling_policy="detached" print_warnings="false"/>
-        </properties>
+    <ros2_control name="${arm_prefix}FrankaHardwareInterface" type="system" is_async="${is_async}">
+        <xacro:if value="${is_async}">
+          <properties>
+            <async scheduling_policy="detached" print_warnings="true" thread_priority="99" manage_overruns="false"/>
+          </properties>
+        </xacro:if>
         <hardware>
-          <param name="version">0.1.0</param>
+          <param name="version">1.0.0</param>
           <param name="robot_type">${robot_type}</param>
           <param name="prefix">${arm_prefix}</param>
           <xacro:if value="${use_fake_hardware}">
