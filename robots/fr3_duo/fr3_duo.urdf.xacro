@@ -64,6 +64,9 @@
   <!-- Are the robots using the async hardware interface? -->
   <xacro:arg name="is_async" default="false" />
 
+  <!-- Thread priority for the hardware interface -->
+  <xacro:arg name="thread_priority" default="50" />
+
   <link name="base">
   </link>
 
@@ -123,7 +126,8 @@
                           arm_prefix= "${modified_prefix}"
                           description_pkg="$(arg description_pkg)"
                           connected_to="${arm_prefixes_list[i]}_base"
-                          is_async="$(arg is_async)">
+                          is_async="$(arg is_async)"
+                          thread_priority="$(arg thread_priority)">
       </xacro:franka_robot>
       <xacro:loop i="${i+1}"/>
     </xacro:unless>
