@@ -2,11 +2,12 @@
 Changelog for package franka_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-UNRELEASED
+2.3.0 (2025-12-19)
 ----------
 * feat: tmrv0_2 added to franka description
 * feat: arm_id replaced by robot_type
 * feat: pass is_async argument to franka_arm.ros2_control.xacro
+* feat: pass thread_priority argument to franka_arm.ros2_control.xacro
 * feat: bump ros2_control version to 1.0.0
 
 2.2.0
