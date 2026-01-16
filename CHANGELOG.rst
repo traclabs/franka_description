@@ -1,6 +1,9 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package franka_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2.3.1 (2026-01-16)
+----------
+* feat: mobile_fr3_duo_v0_2 added to franka description
 
 2.3.0 (2025-12-19)
 ----------
